@@ -2,6 +2,7 @@ package com.team1.trivia.activities;
 
 import java.io.IOException;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
@@ -22,7 +23,7 @@ import com.team1.trivia.controllers.GameController;
 import com.team1.trivia.daos.DatabaseAdapter;
 import com.team1.trivia.daos.DatabaseAdapter.DatabaseHelper;
 
-public class GameActivity extends TriviaActivity {
+public class GameActivity extends Activity {
 
 	static final int DIALOG_INSTRUCTIONS_ID = 4;
 	static final String ROW_ID = "row_id";
