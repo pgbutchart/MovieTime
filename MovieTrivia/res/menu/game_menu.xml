@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/new_game"
+          android:icon="@drawable/ic_menu_new_game"
+          android:title="@string/new_game"
+          android:titleCondensed="@string/new_game"
+          android:alphabeticShortcut="n"
+          android:orderInCategory="1" />
+    <item android:id="@+id/help"
+          android:icon="@drawable/ic_menu_help"
+          android:title="@string/help"
+          android:titleCondensed="@string/help"
+          android:alphabeticShortcut="h"
+          android:orderInCategory="2" />
+    <item android:id="@+id/exit"
+          android:icon="@drawable/ic_menu_exit"
+          android:title="@string/exit"
+          android:titleCondensed="@string/exit"
+          android:alphabeticShortcut="x"
+          android:orderInCategory="3" />
+</menu>

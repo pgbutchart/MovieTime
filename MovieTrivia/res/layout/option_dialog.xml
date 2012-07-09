@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_label_1"
+        android:textColor="@color/option_text_color" 
+        android:textSize="@dimen/option_text_size" 
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/difficultyRadioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/difficultyRadio0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:paddingLeft="40dp"
+            android:text="@string/difficulty_radio_0"
+            android:textColor="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/difficultyRadio1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:text="@string/difficulty_radio_1"
+            android:textColor="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/difficultyRadio2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:text="@string/difficulty_radio_2"
+            android:textColor="@android:color/black" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_label_2" 
+        android:textColor="@color/option_text_color" 
+        android:textSize="@dimen/option_text_size" 
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/modeRadio0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:paddingLeft="40dp"
+            android:text="@string/mode_radio_0"
+            android:textColor="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/modeRadio1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:text="@string/mode_radio_1"
+            android:textColor="@android:color/black" />
+
+    </RadioGroup>
+
+</LinearLayout>
