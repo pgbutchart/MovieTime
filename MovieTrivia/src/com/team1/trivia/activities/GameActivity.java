@@ -7,7 +7,6 @@ import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -16,32 +15,37 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.CursorAdapter;
-import android.widget.ListView;
 
-import com.team1.trivia.QueryBuilder;
 import com.team1.trivia.R;
+import com.team1.trivia.controllers.GameController;
 import com.team1.trivia.daos.DatabaseAdapter;
 import com.team1.trivia.daos.DatabaseAdapter.DatabaseHelper;
-import com.team1.trivia.models.QuizQuestion;
 
 public class GameActivity extends TriviaActivity {
-	public GameActivity() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
 	static final int DIALOG_INSTRUCTIONS_ID = 4;
 	static final String ROW_ID = "row_id";
+	protected Context context;
 	private CursorAdapter titleAdapter;
 	private DatabaseAdapter DBA = new DatabaseAdapter(this);
     private DatabaseHelper DBHelper = DBA.new DatabaseHelper(this);
+	@SuppressWarnings("unused")
 	private SQLiteDatabase myDb;
-	private QueryBuilder qb = new QueryBuilder();
-	private ListView titleListView;
-	
+
+	public GameActivity(Context context) {
+		super();
+		this.context = context;
+	}
+
+	public Context getContext() {
+		return context;
+	}
+
+	public void setContext(Context context) {
+		this.context = context;
+	}
+
 	// Called when the activity is first created.
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,19 +59,9 @@ public class GameActivity extends TriviaActivity {
 			e.printStackTrace();
 		}
 		
-        newGame();
+        GameController.newGame();
         }
     
-    @SuppressWarnings("unused")
-	private void newGame() {
-		// TODO Set up user name and scoring
-    	qb.getQuestions();
-    	
-    	QuizQuestion qq = DBHelper.getTitles(QueryBuilder.qry);
-		
-		
-    	titleListView.setOnItemClickListener(titleListener);
-    	}
 
     @Override
     protected void onStop() {
@@ -80,10 +74,6 @@ public class GameActivity extends TriviaActivity {
     	super.onStop();
     	}
     
-	public SQLiteDatabase getMyDb() {
-		return myDb;
-	}
-
 	public void setMyDb(SQLiteDatabase myDb) {
 		this.myDb = myDb;
 	}
@@ -101,7 +91,7 @@ public class GameActivity extends TriviaActivity {
 	    // Handle menu item selection
 	    switch (item.getItemId()) {
 	        case R.id.new_game:
-	            newGame();
+	            GameController.newGame();
 	            return true;
 	        case R.id.help:
 	            showHelp();
@@ -113,21 +103,6 @@ public class GameActivity extends TriviaActivity {
 	            return super.onOptionsItemSelected(item);
 	            }
 	    }
-
-		// event listener that responds to the user touching a title
-		// in the ListView
-		OnItemClickListener titleListener = new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-					long arg3) {
-				
-				// create an Intent to launch the Scoring Activity
-				Intent scoring = new Intent(GameActivity.this, ScoringActivity.class);
-	 
-				// pass the selected title's row ID as an extra with the Intent
-				scoring.putExtra(ROW_ID, arg3);
-				startActivity(scoring); // start the Scoring Activity
-				} // end method onItemClick
-			}; // end titleListener
 
 		private void exitGame() {
 			// TODO Create logic to settle storage before exit.

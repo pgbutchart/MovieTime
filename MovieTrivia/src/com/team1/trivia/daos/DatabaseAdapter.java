@@ -4,6 +4,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 
 import com.team1.trivia.models.QuizQuestion;
 
@@ -161,22 +162,21 @@ public class DatabaseAdapter extends ListActivity {
 			} // end getCount
 		
 		// Get the phrases and titles
-		@SuppressWarnings("null")
 		public QuizQuestion getTitles(String qry) {
-			QuizQuestion qq = null;
-			int[] id = new int[5];
-			String[] phrase = new String[5];
-			String[] title = new String[5];
+			QuizQuestion qq = new QuizQuestion(null, null, null);
+			ArrayList<Integer> id = new ArrayList<Integer>();
+			ArrayList<String> phrase = new ArrayList<String>();
+			ArrayList<String> title = new ArrayList<String>();
 			
 			Cursor results = myDb.rawQuery(qry, null);
-			//startManagingCursor(results);
+			startManagingCursor(results);
 			
 			if (results.getCount() > 0) {
 				int i = 0;
 				while (results.moveToNext()) {
-					id[i] = results.getInt(0);
-					phrase[i] = results.getString(1);
-					title[i] = results.getString(2);
+					id.add(i, results.getInt(0));
+					phrase.add(i, results.getString(1));
+					title.add(i, results.getString(2));
 					i++;
 				}
 			}
@@ -185,6 +185,7 @@ public class DatabaseAdapter extends ListActivity {
 			qq.setPhrase(phrase);
 			qq.setTitle(title);
 			
+			results.close();
 			return qq;
 			}
 		}

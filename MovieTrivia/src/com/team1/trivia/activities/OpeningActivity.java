@@ -84,7 +84,7 @@ public class OpeningActivity extends TriviaActivity implements OnClickListener {
 			                               (ViewGroup) findViewById(R.id.toast_layout_root));
 
 			ImageView image = (ImageView) layout.findViewById(R.id.image);
-			image.setImageResource(R.drawable.sm_logo);
+			image.setImageResource(R.drawable.icon);
 			TextView text = (TextView) layout.findViewById(R.id.text);
 			text.setText("Get ready to play, " + sp.getString(GAME_PREFERENCES_PLAYER, "Player 1"));
 

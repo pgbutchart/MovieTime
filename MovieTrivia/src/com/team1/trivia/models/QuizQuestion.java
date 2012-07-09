@@ -1,35 +1,42 @@
 package com.team1.trivia.models;
 
+import java.util.ArrayList;
+
 // Model to contain Quiz Question data
 public class QuizQuestion {
-	private int[] _id;
-	private String[] phrase;
-	private String[] title;
-	
-	
+	private ArrayList<Integer> _id;
+	private ArrayList<String> phrase;
+	private ArrayList<String> title;
 
-	public QuizQuestion(int[] _id, String[] phrase, String[] title) {
+	public QuizQuestion(ArrayList<Integer> _id, ArrayList<String> phrase,
+			ArrayList<String> title) {
 		super();
 		this._id = _id;
 		this.phrase = phrase;
 		this.title = title;
 	}
-	public int[] get_id() {
+
+	public ArrayList<Integer> get_id() {
 		return _id;
 	}
-	public void set_id(int[] _id) {
+
+	public void set_id(ArrayList<Integer> _id) {
 		this._id = _id;
 	}
-	public String[] getPhrase() {
+
+	public ArrayList<String> getPhrase() {
 		return phrase;
 	}
-	public void setPhrase(String[] phrase) {
+
+	public void setPhrase(ArrayList<String> phrase) {
 		this.phrase = phrase;
 	}
-	public String[] getTitle() {
+
+	public ArrayList<String> getTitle() {
 		return title;
 	}
-	public void setTitle(String[] title) {
+
+	public void setTitle(ArrayList<String> title) {
 		this.title = title;
 	}
 }
