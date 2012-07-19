@@ -95,9 +95,7 @@ public class OpeningActivity extends TriviaActivity implements OnClickListener {
 			toast.show();
 			
 			// Call the Game Activity and close the Opening Activity
-			startActivity(new Intent(
-					OpeningActivity.this, 
-            		GameActivity.class));
+			startActivity(new Intent(OpeningActivity.this, GameActivity.class));
 			OpeningActivity.this.finish();
 
 			break;
