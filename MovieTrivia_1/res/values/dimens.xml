@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_width">100dp</dimen>
+    <dimen name="button_height">10sp</dimen>
+    <dimen name="option_text_size">18sp</dimen>
+    <dimen name="version_size">20dp</dimen>
+    <dimen name="start_button_width">200dp</dimen>
+    
+</resources>

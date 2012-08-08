@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:orientation="vertical" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:background="@drawable/phrase_box"
+        android:drawableLeft="@drawable/icon"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/icon"
+        android:shadowColor="#AA0000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="@string/header_title"
+        android:textColor="@color/title_text_color"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/phraseLabel"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/phrase_label"
+        android:layout_width="fill_parent"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/phraseTextView"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phraseLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/phrase_box"
+        android:gravity="center"
+        android:text="@string/default_phrase"
+        android:layout_width="fill_parent"
+        android:textColor="@android:color/black" />
+
+	<ListView
+	    android:id="@android:id/list"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/phraseTextView" 
+	    android:layout_width="fill_parent" />
+
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@android:id/list"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:maxHeight="30dp"
+        android:text="@string/check_answer_label" />
+
+</RelativeLayout>

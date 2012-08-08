@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MovieTrivia</string>
+    <string name="instruction_button">Instructions</string>
+    <string name="mode_button">Game Mode</string>
+    <string name="category_button">Categories</string>
+    <string name="option_button">Difficulty</string>
+    <string name="help_text">Movie Time is an easy game to play. 
+        You can select the movie categories you want to play with or, if you\'re brave, 
+        you can try your hand at any movie in the database. Under the options you can 
+        set the difficulty by chosing 3 possible movie title choices (easy), 6 possible 
+        choices (medium), or 9 movie titles (hard). You can also choose between limited 
+        questions or unlimited questions. In limited mode, you are scored by the percentage 
+        of questions you get correct. In unlimited mode, the questions keep coming until 
+        you get one wrong.  Your score is based on how many you get right in a row. 
+        If you\'re ready, make your selections and show the world how smart you are.</string>
+    <string name="option_label_1">Select Difficulty</string>
+    <string name="difficulty_radio_0">Easy (3 choices)</string>
+    <string name="difficulty_radio_1">Medium (6 choices)</string>
+    <string name="difficulty_radio_2">Hard (9 choices)</string>
+    <string name="option_label_2">Select Game Mode</string>
+    <string name="mode_radio_0">Limited Questions</string>
+    <string name="mode_radio_1">Unlimited Questions</string>
+    <string name="content_description">Image</string>
+    <string name="default_phrase">There\'s no crying in baseball!</string>
+    <string name="default_title_1">JERRY MAGUIRE</string>
+    <string name="default_title_2">DR. STRANGELOVE</string>
+    <string name="default_title_3">MARATHON MAN</string>
+    <string name="default_title_4">A LEAGUE OF THEIR OWN</string>
+    <string name="default_title_5">SOME LIKE IT HOT</string>
+    <string name="default_title_6">THE TREASURE OF THE SIERRA MADRE</string>
+    <string name="phrase_label">Movie Phrase:</string>
+    <string name="splash_title_1">Movie</string>
+    <string name="splash_title_2">Time</string>
+    <string name="app_version_info">Version 0.5.0\nCopyright © 2012 TeamOne, Inc.\nAll Rights Reserved.</string>
+    <string name="header_title">Movie Time</string>
+    <string name="start_game">Start Game</string>
+    <string name="player_name_label">Enter Player Name:</string>
+    <string name="check_answer_label">Check Answer</string>
+    <string name="name_label">Enter Your Name</string>
+    <string name="new_game">New Game</string>
+    <string name="help">Help</string>
+    <string name="exit">Exit</string>
+    <string name="ok">OK</string>
+    <string name="listitem">List Item</string>
+
+</resources>
